@@ -1,0 +1,108 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# Testing
+# =========================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+# =========================
+# ML Generated Artifacts
+# =========================
+
+artifacts/models/
+*.pkl
+*.joblib
+
+# =========================
+# Generated Embeddings
+# =========================
+
+*embeddings*.npy
+*embeddings*.npz
+*embeddings*.pkl
+
+# =========================
+# Dataset files
+# =========================
+
+# Raw datasets
+data/raw/
+
+# Processed datasets
+data/processed/
+
+# Large parquet datasets
+*.parquet
+
+# CSV datasets
+*.csv
+
+# =========================
+# Downloaded datasets
+# =========================
+
+esci-data-main/
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*.swp
