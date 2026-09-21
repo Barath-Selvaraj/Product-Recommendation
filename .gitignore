@@ -60,21 +60,7 @@ Thumbs.db
 *.log
 logs/
 
-# =========================
-# ML Generated Artifacts
-# =========================
 
-artifacts/models/
-*.pkl
-*.joblib
-
-# =========================
-# Generated Embeddings
-# =========================
-
-*embeddings*.npy
-*embeddings*.npz
-*embeddings*.pkl
 
 # =========================
 # Dataset files
