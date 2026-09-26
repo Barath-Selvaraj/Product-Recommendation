@@ -11,9 +11,18 @@ from app.core.exception_handlers import (
     unexpected_exception_handler,
 )
 
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="AI Product Recommendation System",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(recommendation_router)

@@ -16,11 +16,26 @@ class ESCIService:
 
         for product, similarity in products:
 
+            brand = product.product_brand
+            color = product.product_color
+
+            # Missing brand → REMOVE PRODUCT
+            if brand is None or (
+                isinstance(brand, float) and math.isnan(brand)
+            ) or brand == "NaN":
+                continue
+
+            # Missing color → USE BLACK
+            if color is None or (
+                isinstance(color, float) and math.isnan(color)
+            ) or color == "NaN":
+                color = "Black"
+
             product_data = {
                 "query": query,
                 "product_title": product.product_title,
                 "product_brand": product.product_brand,
-                "product_color": product.product_color,
+                "product_color": color,
                "product_bullet_point": product.product_bullet_point,
                 "product_description": product.product_description,
             }
